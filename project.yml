@@ -1,0 +1,19 @@
+environment:
+  GH_WEBHOOK_SECRET: ${GH_WEBHOOK_SECRET}
+  WSK_AUTH: ${WSK_AUTH}
+  dbHost: ${dbHost}
+  dbPort: ${dbPort}
+  dbUser: ${dbUser}
+  dbPass: ${dbPass}
+  dbName: ${dbName}
+packages:
+  - name: gitway
+    functions:
+      - name: gh
+        runtime: go:default
+        web: raw
+      - name: messenger
+        runtime: go:default
+        webSecure: ${WSK_AUTH}
+        limits:
+          memory: 1024

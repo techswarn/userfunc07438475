@@ -1,0 +1,11 @@
+output = "entities"
+wipe = true
+no-tests = true
+add-enum-types = true
+
+[psql]
+dbname = "firstofficer"
+user = "doadmin"
+pass = ""
+host = "ht-db-postgres-do-user-12354845-0.b.db.ondigitalocean.com"
+port = 25060
