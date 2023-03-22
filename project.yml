@@ -12,6 +12,8 @@ packages:
       - name: gh
         runtime: go:default
         web: raw
+        limits:
+          memory: 1024
       - name: messenger
         runtime: go:default
         webSecure: ${WSK_AUTH}
